@@ -10,8 +10,8 @@ class Model {
 			
 			$this->conexion = $mvc_bd_conexion;
 		} catch (PDOException $e) {
-			$error = 'Falló la conexión: ' . $e->getMessage();
-			die('No ha sido posible realizar la conexión con la base de datos: '. $mvc_bd_conexion->connect_error);
+			$error = 'Fallo la conexion: ' . $e->getMessage();
+			die('No ha sido posible realizar la conexion con la base de datos: '. $mvc_bd_conexion->connect_error);
 		}
 	 }
 

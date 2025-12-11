@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>Desarrollo web en entorno servidor - tema 10 - MVC</title>
+	<title>Desarrollo web en entorno servidor - MVC</title>
 	
 	<link rel="stylesheet" href="<?php echo 'css/'.Config::$mvc_vis_css ?>"/>
 </head>
 <body>
 	<header>
-		<h1>Información de alimentos</h1>
+		<h1>InformaciÃ³n de alimentos</h1>
 	</header>
 
 	<nav>
@@ -17,8 +17,8 @@
 			<li><a href="index.php?ctl=listar">ver alimentos</a></li>
 			<li><a href="index.php?ctl=insertar">insertar alimento</a></li>
 			<li><a href="index.php?ctl=buscar">buscar por nombre</a></li>
-			<li><a href="index.php?ctl=buscarAlimentosPorEnergia">buscar por energía</a></li>
-			<li><a href="index.php?ctl=buscarAlimentosCombinada">búsqueda combinada</a></li>
+			<li><a href="index.php?ctl=buscarAlimentosPorEnergia">buscar por energÃ­a</a></li>
+			<li><a href="index.php?ctl=buscarAlimentosCombinada">bÃºsqueda combinada</a></li>
 		</ul>
 	 </nav>
 

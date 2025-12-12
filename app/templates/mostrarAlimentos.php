@@ -1,5 +1,5 @@
 <?php ob_start() ?>
-<table>
+<table class="tabla-calida">
 	<tr>
 		<th>alimento (por 100g)</th>
 		<th>energia (Kcal)</th>

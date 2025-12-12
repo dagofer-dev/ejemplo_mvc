@@ -1,6 +1,6 @@
 <?php ob_start() ?>
 <?php if(isset($params['mensaje'])) :?>
-	<div class="mensaje"><?php echo $params['mensaje'] ?>/div>
+	<div class="mensaje"><?php echo $params['mensaje'] ?></div>
 <?php endif; ?>
 
 <form name="formInsertar" action="index.php?ctl=insertar" method="post">
@@ -22,7 +22,7 @@
 	<label for="grasa">Grasa total (g)</label>
 	<input type="text" name="grasa" id="grasa" value="<?php echo $params['grasa'] ?>">
 
-	<input type="submit" value="insertar" name="insertar">
+	<input type="submit" value="Insertar" name="insertar" class="nav-btn">
 	<div>* Los valores deben referirse a 100 g del alimento</div>
 </form>
 

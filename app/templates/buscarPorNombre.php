@@ -1,14 +1,14 @@
 <?php ob_start() ?>
 <form name="formBusqueda" action="index.php?ctl=buscar" method="post">
-	<label for="nombre">nombre alimento:</label>
+	<label for="nombre">Nombre alimento:</label>
 	<input type="text" name="nombre" id="nombre" value="<?php echo $params['nombre'] ?>">
 	<span>(puedes utilizar '%' como comodin)</span>
 
-	<input type="submit" value="buscar">
+	<input type="submit" value="Buscar" class="nav-btn">
 </form>
 
 <?php if (count($params['resultado'])>0): ?>
-	<table>
+	<table class="tabla-calida">
 		<tr>
 			<th>alimento (por 100g)</th>
 			<th>energia (Kcal)</th>

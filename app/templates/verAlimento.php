@@ -1,7 +1,7 @@
 <?php ob_start() ?>
 <h1><?php echo strtoupper($params['nombre']) ?></h1>
 
-<table>
+<table class="tabla-calida">
 	<tr>
 		<td>Energia</td>
 		<td><?php echo $params['energia'] ?></td>

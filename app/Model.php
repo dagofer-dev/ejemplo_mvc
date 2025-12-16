@@ -6,12 +6,9 @@ class Model {
 
 		$opc = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 		try {
-			$mvc_bd_conexion = new PDO('mysql:host='. $dbhost .';dbname=alimentos', 'root', '', $opc);
-			
-			$this->conexion = $mvc_bd_conexion;
+			$this->conexion  = new PDO('mysql:host='. $dbhost .';dbname='.$dbname, $dbuser, $dbpass, $opc);
 		} catch (PDOException $e) {
-			$error = 'Fallo la conexion: ' . $e->getMessage();
-			die('No ha sido posible realizar la conexion con la base de datos: '. $mvc_bd_conexion->connect_error);
+			die('No ha sido posible realizar la conexion con la base de datos: '. $e->getMessage());
 		}
 	 }
 

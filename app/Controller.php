@@ -16,7 +16,7 @@ class Controller
 					   Config::$mvc_bd_usuario,
 					   Config::$mvc_bd_clave,
 					   Config::$mvc_bd_hostname);
-		$params = array('alimentos' => $m->dameAlimentos());
+		$params = array('alimentos' => $m->buscarAlimentos());
 		require __DIR__ . '/templates/mostrarAlimentos.php';
 	}
 
@@ -82,7 +82,7 @@ class Controller
 					   Config::$mvc_bd_usuario,
 					   Config::$mvc_bd_clave,
 					   Config::$mvc_bd_hostname);
-		$params = $m->dameAlimento($id);
+		$params = $m->buscarAlimentoPorId($id);
 		require __DIR__ . '/templates/verAlimento.php';
 	}
 }

@@ -12,7 +12,7 @@ class Model {
 		}
 	 }
 
-	private function dameAlimentosDB($sql){
+	private function lanzarSQLEnBD($sql){
 		$result = $this->conexion->query($sql);
 
 		$alimentos = array();
@@ -24,23 +24,23 @@ class Model {
 		return $alimentos;
 	}
 
-	public function dameAlimentos(){
+	public function buscarAlimentos(){
 		$sql = 'SELECT * FROM alimentos ORDER BY energia DESC;';
-		return $this->dameAlimentosDB($sql);
+		return $this->lanzarSQLEnBD($sql);
 	}
 
 	public function buscarAlimentosPorNombre($nombre){
 		$nombre = htmlspecialchars($nombre);
 		$sql = 'SELECT * FROM alimentos WHERE nombre LIKE "'. $nombre .'" ORDER BY energia DESC;';
 	
-		return $this->dameAlimentosDB($sql);
+		return $this->lanzarSQLEnBD($sql);
 	}
 
-	public function dameAlimento($id){
+	public function buscarAlimentoPorId($id){
 		$id = htmlspecialchars($id);
 		$sql = 'SELECT * FROM alimentos WHERE id='. $id .';';
 
-		return $this->dameAlimentosDB($sql)[0];
+		return $this->lanzarSQLEnBD($sql)[0];
 	}
 
 	public function insertarAlimento($n, $e, $p, $hc, $f, $g){

@@ -3,6 +3,7 @@
 	<div class="mensaje"><?php echo $params['mensaje'] ?></div>
 <?php endif; ?>
 
+<!-- este formulario llamará a la acción 'insertar' del mapa de index.php -->
 <form name="formInsertar" action="index.php?ctl=insertar" method="post">
 	<label for="nombre">Nombre</label>
 	<input type="text" name="nombre" id="nombre" value="<?php echo $params['nombre'] ?>">

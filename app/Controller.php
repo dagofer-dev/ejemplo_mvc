@@ -1,5 +1,10 @@
 ﻿<?php
-// app/Controller.php
+/*  Fichero app/Controller.php
+ *  Esta clase contendrá los métodos o acciones indicados en el mapa del archivo 'index.php'
+ *  Cada método asigna a la variable 'params' los datos necesarios en la plantilla
+ *  que se incluye a continuación. Será una plantilla de la carpeta 'templates', correspondiente
+ *  a la acción que se debe realizar.
+ */
 class Controller
 {
 	public function inicio() {
@@ -16,6 +21,9 @@ class Controller
 					   Config::$mvc_bd_usuario,
 					   Config::$mvc_bd_clave,
 					   Config::$mvc_bd_hostname);
+		// A la clave 'alimentos' se le asigna el valor resultante de realizar la consulta
+		// 'buscarAlimentos' del modelo. El resultado de la consulta se pasará a su vez
+		// a la plantilla 'mostrarAlimentos'
 		$params = array('alimentos' => $m->buscarAlimentos());
 		require __DIR__ . '/templates/mostrarAlimentos.php';
 	}
@@ -35,12 +43,13 @@ class Controller
 					   Config::$mvc_bd_clave,
 					   Config::$mvc_bd_hostname);
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-			// comprobar campos formulario
+			// Se comprueban los campos del formulario, si son válidos se inserta el alimento y se redirige a 'listar'
 			if ($m->validarDatos($_POST['nombre'], $_POST['energia'],$_POST['proteina'], $_POST['hc'], $_POST['fibra'], $_POST['grasa'])) {
 				$m->insertarAlimento($_POST['nombre'], $_POST['energia'], $_POST['proteina'], $_POST['hc'], $_POST['fibra'], $_POST['grasa']);
 				header('Location: index.php?ctl=listar');
 			}
 			else {
+				// Si los campos del formulario no son válidos, se muestra el mensaje de error
 				$params = array(
 					'nombre' => $_POST['nombre'],
 					'energia' => $_POST['energia'],

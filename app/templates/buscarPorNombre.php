@@ -1,4 +1,5 @@
 <?php ob_start() ?>
+<!-- este formulario llamará a la acción 'buscar' del mapa de index.php -->
 <form name="formBusqueda" action="index.php?ctl=buscar" method="post">
 	<label for="nombre">Nombre alimento:</label>
 	<input type="text" name="nombre" id="nombre" value="<?php echo $params['nombre'] ?>">

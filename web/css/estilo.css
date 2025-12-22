@@ -3,17 +3,26 @@
 
 :root {
 	--color-bg: #f8b095;
-	--color-text: #2C2C2C;
+	--color-text-btn: #2C2C2C;
+	--color-text-main: #F0EDE8;
 	--color-text-secondary: #7A7A7A;
 	--color-primary: #FF7F50;
 	--color-accent: #FFD166;
 	--color-border: #F0EDE8;
 }
 
+
+html {
+	height: 100%;
+}
+
 body {
+	height: 100%;
 	padding-left: 11em;
-	background: var(--color-bg);
-	color: var(--color-text);
+	/*background: linear-gradient(45deg, #FFD166, #FF7F50);*/
+	background-image: linear-gradient(9deg, #7b0d93 , #ef5b00), url(../images/coding-background-texture.jpg);
+	background-blend-mode: overlay;
+	color: var(--color-text-main);
 	font-family: 'Inter', sans-serif;
 	font-size: 16px;
 	line-height: 1.6;
@@ -87,44 +96,45 @@ small {
 }
 
 .nav-links {
-  list-style: none;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	gap: 2rem;
+	margin: 0;
+	padding: 0;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: var(--color-text);
-  font-weight: 500;
-  transition: color 0.2s ease;
+	text-decoration: none;
+	color: var(--color-text-btn);
+	font-weight: 500;
+	transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: var(--color-primary);
+	color: var(--color-primary);
 }
 
 .nav-links .active {
-  color: var(--color-primary);
+	color: var(--color-primary);
 }
 
 .nav-btn {
-  background: var(--color-accent);
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  color: var(--color-text);
-  cursor: pointer;
-  transition: background 0.2s ease;
+	background: linear-gradient(45deg, #FFD166, #FF7F50);
+	border: none;
+	padding: 0.6rem 1.2rem;
+	border-radius: 8px;
+	font-weight: 600;
+	color: var(--color-text-btn);
+	cursor: pointer;
+	transition: background 0.2s ease;
 }
 
 .nav-btn:hover {
-  background: #ffca4d; /* un poco más oscuro */
+	background: #ffca4d;
+	/* un poco más oscuro */
 }
 
 nav li {
-	background: var(--color-accent);
+	background: linear-gradient(45deg, #FFD166, #FF7F50);
 	margin: 0.5em 0;
 	padding: 0.3em;
 	border-right: 1em solid black;
@@ -166,46 +176,47 @@ footer {
 
 /* TABLA */
 .tabla-calida {
-  width: 100%;
-  border-collapse: collapse;
-  background: var(--color-bg);
-  font-family: 'Inter', sans-serif;
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  overflow: hidden;
+	width: 100%;
+	border-collapse: collapse;
+	background: var(--color-bg);
+	font-family: 'Inter', sans-serif;
+	color: var(--color-text-btn);
+	border: 1px solid var(--color-border);
+	border-radius: 12px;
+	overflow: hidden;
 }
 
 .tabla-calida thead {
-  background: var(--color-primary);
-  color: white;
+	background: var(--color-primary);
+	color: white;
 }
 
 .tabla-calida th,
 .tabla-calida td {
-  padding: 1rem;
-  text-align: left;
-  border-bottom: 1px solid var(--color-border);
+	padding: 1rem;
+	text-align: left;
+	border-bottom: 1px solid var(--color-border);
 }
 
 .tabla-calida tbody tr:hover {
-  background: #FFEDE6; /* coral muy suave */
+	background: #FFEDE6;
+	/* coral muy suave */
 }
 
 /* Estados */
 .estado {
-  font-weight: 600;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  display: inline-block;
+	font-weight: 600;
+	padding: 0.4rem 0.8rem;
+	border-radius: 6px;
+	display: inline-block;
 }
 
 .estado.activo {
-  background: var(--color-accent);
-  color: var(--color-text);
+	background: var(--color-accent);
+	color: var(--color-text-btn);
 }
 
 .estado.inactivo {
-  background: #F0EDE8;
-  color: var(--color-text-secondary);
+	background: #F0EDE8;
+	color: var(--color-text-secondary);
 }
